@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+@font-face {
+   font-family: akira;
+   src: url(./font/Akira\ Expanded\ Demo.otf);
+}
+
+@font-face {
+   font-family: libre;
+   src: url(./font/LibreBaskerville-Bold.ttf);
+}
+
+@font-face {
+   font-family: poppins;
+   src: url(./font/poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+   font-family: poppinsR;
+   src: url(./font/poppins/Poppins-Thin.ttf);
+}
+
+@font-face {
+   font-family: poppinsblack;
+   src: url(./font/poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+   font-family: tech;
+   src: url(./font/ShareTechMono-Regular.ttf);
+}
+
+:root {
+   /* --clr-primary: royalblue;
+   --clr-secondary: red;
+   --clr-light: white;
+   --clr-dark: #333; */
+
+   --clr-primary: black;
+   --clr-secondary: white;
+   --clr-tertiary: royalblue;
+   --clr-accent: red;
+}
+
+::selection {
+   background-color: var(--clr-accent);
+}
+
+body {
+   height: 100vh;
+   background-color: var(--clr-primary);
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo a {
+   text-decoration: none;
+   display: inline-block;
+   font-family: akira;
+   font-size: 2rem;
+   padding: 2rem 3rem;
+   color: var(--clr-secondary);
+}
+
+nav {
+   justify-content: space-around;
+   transform: translateX(-3rem);
+}
+
+nav a {
+   text-decoration: none;
+   color: var(--clr-secondary);
+   display: inline-block;
+   font-family: poppins;
+   letter-spacing: 0.1rem;
+   padding: 0.8rem 2rem;
+   transition: 0.3s;
+}
+
+nav a:hover {
+   /* background-color: darkblue; */
+   text-shadow: 0px 5px 10px var(--clr-secondary);
+   transform: translateY(4px);
+}
+
+
+.modeswitch i {
+   cursor: pointer;
+   fill: currentColor;
+   margin-right: 1rem;
+   padding: 2rem;
+   scale: 125%;
+   color: var(--clr-secondary);
+}
+
+main {
+   height: calc(100vh - 6.3rem);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 4fr 1fr;
+}
+
+.left {
+   display: grid;
+}
+
+.left img {
+   align-self: center;
+   justify-self: end;
+   width: 680px;
+   height: 350px;
+   object-fit: cover;   
+   object-position: 10px -120px;
+}
+
+.right {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   padding-bottom: 0.5rem;
+   padding-inline: 4.5rem;
+}
+
+.right :where(h1, p) {
+   color: var(--clr-secondary);
+}
+
+.right h1 {
+   font-family: poppinsblack;
+   width: fit-content;
+}
+
+.right p {
+   font-family: poppinsR;
+   font-size: 1.2rem;
+}
+
+.left p {
+   position: absolute;
+   top: 46vh;
+   left: 28px;
+   font-size: 1.4rem;
+   font-family: tech;
+   color: var(--clr-secondary);
+   transform: rotateZ(90deg);
+}
+
+.left i {
+   position: absolute;
+   fill: currentColor;
+   color: var(--clr-secondary);
+   top: 74vh;
+   left: 34.5px;
+}
+
+.line {
+   position: absolute;
+   top: 50vh;
+   left: 40px;
+   background-color: var(--clr-secondary);
+   width: 1px;
+   height: 25vh;
+}
+
+.bottom-left {
+   margin-left: 15px;
+   font-size: 4rem;
+   font-family: akira;
+   color: var(--clr-secondary);
+   letter-spacing: 3px;
+   transform: translateY(-30px);
+}
+
+.arrows {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+   fill: currentColor;
+   color: var(--clr-secondary);
+   margin-right: 10rem;
+}
+
+.arrows i {
+   scale: 190%;
+   padding: 1rem;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.arrows i:hover {
+   text-shadow: 0 0 10px white;
+}
